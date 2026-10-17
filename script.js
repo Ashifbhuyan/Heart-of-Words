@@ -371,16 +371,4 @@ initBackgroundParticles();
 initHeartParticles();
 requestAnimationFrame(renderBackground);
 requestAnimationFrame(renderHeart);
-const music = new Audio('music.mp3');
-music.loop = true;
-music.volume = 0.6;
-const startMusic = () => {
-  music.play().then(() => {
-    ['click', 'touchend', 'pointerup', 'keydown'].forEach(e =>
-      document.removeEventListener(e, startMusic)
-    );
-  }).catch(() => {});
-};
-['click', 'touchend', 'pointerup', 'keydown'].forEach(e =>
-  document.addEventListener(e, startMusic)
-);
+
