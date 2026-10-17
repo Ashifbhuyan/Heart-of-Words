@@ -371,3 +371,11 @@ initBackgroundParticles();
 initHeartParticles();
 requestAnimationFrame(renderBackground);
 requestAnimationFrame(renderHeart);
+const music = new Audio('music.mp3');
+music.loop = true;
+music.volume = 0.6;
+const startMusic = () => {
+  music.play();
+  window.removeEventListener('pointerdown', startMusic);
+};
+window.addEventListener('pointerdown', startMusic);
