@@ -16,7 +16,7 @@ let centerX = width / 2;
 let centerY = height / 2;
 
 // Particles & State
-const MESSAGE = 'I Love You';
+const MESSAGE = 'AMIRA MY LOML';
 const SHADES = ['#ff1758', '#ff2a6d', '#ff5285', '#ff789e', '#ffa8c0', '#ffd6e3', '#ffffff'];
 const GLOW_COLOR = 'rgba(255, 42, 109, 0.75)';
 
