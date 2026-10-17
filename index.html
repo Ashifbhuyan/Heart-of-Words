@@ -19,5 +19,24 @@
   <canvas id="heartCanvas"></canvas>
 
   <script src="script.js"></script>
+  <audio id="bgm" src="music.mp3" loop preload="auto"></audio>
+  <script>
+(function () {
+  var a = document.getElementById('bgm');
+  a.volume = 0.6;
+  var events = ['click', 'touchend', 'pointerup', 'keydown'];
+  function start() {
+    a.play().then(function () {
+      events.forEach(function (e) {
+        window.removeEventListener(e, start, true);
+      });
+    }).catch(function () {});
+  }
+  a.play().catch(function () {});
+  events.forEach(function (e) {
+    window.addEventListener(e, start, true);
+  });
+})();
+</script>
 </body>
 </html>
